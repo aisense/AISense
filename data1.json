@@ -1,0 +1,57 @@
+{
+  "query": {
+    "count": 1,
+    "created": "2015-09-12T13:20:58Z",
+    "lang": "en-US",
+    "diagnostics": {
+      "url": [
+        {
+          "execution-start-time": "1",
+          "execution-stop-time": "1",
+          "execution-time": "0",
+          "content": "http://www.datatables.org/yahoo/finance/finance.scrape.trend.xml"
+        },
+        {
+          "execution-start-time": "6",
+          "execution-stop-time": "156",
+          "execution-time": "150",
+          "content": "http://finance.yahoo.com/q?s=yhoo"
+        },
+        {
+          "execution-start-time": "6",
+          "execution-stop-time": "156",
+          "execution-time": "150",
+          "content": "http://finance.yahoo.com/q?s=yhoo"
+        }
+      ],
+      "publiclyCallable": "true",
+      "cache": {
+        "execution-start-time": "5",
+        "execution-stop-time": "6",
+        "execution-time": "1",
+        "method": "GET",
+        "type": "MEMCACHED",
+        "content": "a87c9dfaea5ddad49b03fe226d2936e5"
+      },
+      "query": {
+        "execution-start-time": "6",
+        "execution-stop-time": "160",
+        "execution-time": "154",
+        "content": "select * from html(3,1) where url=\"http://finance.yahoo.com/q?s=yhoo\" and xpath=\"//td[@class='yfnc_tabledata1']//strong\""
+      },
+      "javascript": {
+        "execution-start-time": "4",
+        "execution-stop-time": "160",
+        "execution-time": "155",
+        "instructions-used": "12000",
+        "table-name": "finance.scrape.trend"
+      },
+      "user-time": "160",
+      "service-time": "285",
+      "build-version": "0.2.154"
+    },
+    "results": {
+      "value": null
+    }
+  }
+}
