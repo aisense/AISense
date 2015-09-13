@@ -36,10 +36,10 @@ class portfolioPredictor:
         self.allStocks = db.getInvestments(self.userId)
         return self.categorizePortfolio(self.allStocks)
 
-    def getTopPerformers(self, category='ALL', top=True):
+    def getTopPerformers(self, category='all', top=True):
         db = dbAccessor()
         companiesReturn = []
-        companyList = db.companiesOfType()
+        companyList = db.companiesOfType(category)
         for row in companyList:
             companiesReturn.append((row[1], self.companyPredic.getMonthlyReturns(row[2])))
         return sorted(companiesReturn, reverse=top, key=lambda x: x[1])

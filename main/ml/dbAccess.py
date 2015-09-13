@@ -23,8 +23,8 @@ class dbAccessor:
             return self.cursor.fetchall()
         pass
 
-    def companiesOfType(self,category='ALL', order = 'DESC'):
-        if category == 'ALL':
+    def companiesOfType(self,category='all', order = 'DESC'):
+        if category == 'all':
             queryString = "select * from company"
         else:
             queryString = "select * from company WHERE ctype='"+category+"'"

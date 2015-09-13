@@ -199,7 +199,7 @@ def get_portfolio_trends():
 @application.route('/api/get_top_performers/<string:categ>', methods=['POST'])
 def get_top_performers(categ):
     p = portfolioPredictor()
-    data = p.getTopPerformers(category=categ)
+    data = p.getTopPerformers(category=str(categ))
     print(data)
     response = make_response(jsonify(data=data), 200)
     response.headers['Access-Control-Allow-Credentials'] = 'true'
